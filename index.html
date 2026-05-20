@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Franck Chendjou — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- CURSEUR CUSTOM -->
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
+
+<!-- FOND ANIMÉ -->
+<div id="bg-grid">
+  <div class="grid-lines"></div>
+  <div class="grid-glow"></div>
+  <div class="grid-scan"></div>
+</div>
+<canvas id="particles"></canvas>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="logo">FK_</div>
+  <ul class="nav-links">
+    <li><a href="#home" class="nav-a">HOME</a></li>
+    <li><a href="#about" class="nav-a">ABOUT</a></li>
+    <li><a href="#skills" class="nav-a">SKILLS</a></li>
+    <li><a href="#projects" class="nav-a">PROJECTS</a></li>
+    <li><a href="#contact" class="nav-a">CONTACT</a></li>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>DISPONIBLE
+  </div>
+  <button class="burger" id="burger" onclick="toggleMenu()">☰</button>
+</nav>
+
+<!-- MENU MOBILE -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#home" class="mob-a" onclick="toggleMenu()">HOME</a>
+  <a href="#about" class="mob-a" onclick="toggleMenu()">ABOUT</a>
+  <a href="#skills" class="mob-a" onclick="toggleMenu()">SKILLS</a>
+  <a href="#projects" class="mob-a" onclick="toggleMenu()">PROJECTS</a>
+  <a href="#contact" class="mob-a" onclick="toggleMenu()">CONTACT</a>
+</div>
+
+<!-- HOME -->
+<section id="home">
+  <div class="hero-bg-text">DEV</div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="glitch-tag">// PORTFOLIO 2026</div>
+      <h1>
+        <span class="cyan">FRANCK</span><br/>
+        CHEN<span class="pink">DJOU</span>
+      </h1>
+      <div class="hero-role">DÉVELOPPEUR <span class="pink">WEB</span> & UI/UX</div>
+      <p class="hero-desc">
+        Passionné par le code et le design.<br/>
+        Je construis des expériences web modernes et mémorables.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-cyber btn-c">VOIR PROJETS</a>
+        <a href="#contact" class="btn-cyber btn-p">ME CONTACTER</a>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-frame">
+        <div class="scan-line"></div>
+        <div class="photo-corners">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        
+        ╔═══════════════════════════════════════╗
+        ║         POUR AJOUTER TA PHOTO         ║
+        ╠═══════════════════════════════════════╣
+        ║ 1. Mets ta photo dans le même dossier ║
+        ║ 2. Supprime le bloc .photo-placeholder ║
+        ║ 3. Décommente la ligne <img> ci-dessous║
+        ╚═══════════════════════════════════════╝
+        
+        
+         <img src="fod1.png" alt="Franck Chendjou" class="photo-img"/> 
+
+      </div>
+      <div class="photo-data">
+        <span>ID: FK_2026</span>
+        <span>STATUS: ONLINE</span>
+        <span>LVL: DEV</span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-down">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-head reveal">
+    <div class="s-label">À PROPOS</div>
+    <div class="s-title">QUI <span class="hl">SUIS-JE</span> ?</div>
+  </div>
+  <div class="sec-divider"></div>
+  <div class="about-body">
+    <div class="about-left reveal">
+      <p class="about-text">Je suis étudiant en développement web et design UI/UX, passionné par la création de sites modernes et fonctionnels.</p>
+      <p class="about-text">J'apprends le HTML, CSS, JavaScript et Python pour construire des projets concrets. Mon objectif : créer des expériences utilisateur mémorables.</p>
+      <div class="tags">
+        <span class="stag c">HTML5</span>
+        <span class="stag c">CSS3</span>
+        <span class="stag p">JAVASCRIPT</span>
+        <span class="stag p">PYTHON</span>
+        <span class="stag v">UI/UX DESIGN</span>
+        <span class="stag v">FIGMA</span>
+        <span class="stag c">RESPONSIVE</span>
+        <span class="stag p">GIT</span>
+      </div>
+    </div>
+    <div class="stats-panel reveal">
+      <div class="stat-row">
+        <div class="stat-num">3+</div>
+        <div class="stat-txt">PROJETS<br/>RÉALISÉS</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-num">1AN</div>
+        <div class="stat-txt">D'EXPÉ<br/>RIENCE</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-num">100%</div>
+        <div class="stat-txt">MOTIVA<br/>TION</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-head reveal">
+    <div class="s-label">COMPÉTENCES</div>
+    <div class="s-title">MES <span class="hl">SKILLS</span></div>
+  </div>
+  <div class="sec-divider"></div>
+  <div class="skills-grid">
+
+    <div class="skill-item reveal">
+      <div class="skill-top">
+        <span class="skill-name">UI/UX DESIGN</span>
+        <span class="skill-pct cyan">90%</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill v" data-width="90"></div>
+      </div>
+      <div class="skill-sub">Design d'interface, wireframes, prototypage</div>
+    </div>
+
+    <div class="skill-item reveal">
+      <div class="skill-top">
+        <span class="skill-name">HTML / CSS</span>
+        <span class="skill-pct cyan">85%</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill c" data-width="85"></div>
+      </div>
+      <div class="skill-sub">Structure, mise en page, animations</div>
+    </div>
+
+    <div class="skill-item reveal">
+      <div class="skill-top">
+        <span class="skill-name">PYTHON</span>
+        <span class="skill-pct pink">50%</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill p" data-width="50"></div>
+      </div>
+      <div class="skill-sub">Scripts, bases de données, logique</div>
+    </div>
+
+    <div class="skill-item reveal">
+      <div class="skill-top">
+        <span class="skill-name">JAVASCRIPT</span>
+        <span class="skill-pct pink">50%</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill p" data-width="50"></div>
+      </div>
+      <div class="skill-sub">Interactivité, DOM, animations</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec-head reveal">
+    <div class="s-label">MES TRAVAUX</div>
+    <div class="s-title">MES <span class="hl">PROJETS</span></div>
+  </div>
+  <div class="sec-divider"></div>
+  <div class="proj-grid">
+
+    <!--
+    ╔════════════════════════════════════════════╗
+    ║         POUR AJOUTER TES IMAGES            ║
+    ╠════════════════════════════════════════════╣
+    ║ 1. Fais une capture d'écran de ton projet  ║
+    ║ 2. Mets l'image dans le même dossier       ║
+    ║ 3. Supprime le .pcard-thumb-placeholder    ║
+    ║ 4. Décommente la ligne <img> dans la carte ║
+    ╚════════════════════════════════════════════╝
+    -->
+
+    <div class="pcard reveal">
+      <div class="pcard-thumb">
+         <img src="cinema.jpg" alt="Billet cinéma" class="pcard-img"/> 
+        <div class="pcard-badge">UI/UX</div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-num">// 01</div>
+        <div class="pcard-title">Maquette Billet Cinéma</div>
+        <div class="pcard-desc">Conception d'une maquette de réservation de billets de cinéma avec parcours utilisateur complet.</div>
+        <div class="pcard-tags"><span>UI/UX</span><span>FIGMA</span><span>PROTOTYPE</span></div>
+        <a href="#" class="pcard-link">VOIR PROJET →</a>
+      </div>
+    </div>
+
+    <div class="pcard reveal">
+      <div class="pcard-thumb">
+        <div class="pcard-thumb-placeholder">📸 Image de ton projet ici</div>
+        <!-- <img src="site-pedagogique.png" alt="Site pédagogique" class="pcard-img"/> -->
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-num">// 02</div>
+        <div class="pcard-title">Site Pédagogique</div>
+        <div class="pcard-desc">Site web multi-pages présentant les balises HTML pour débutants.</div>
+        <div class="pcard-tags"><span>HTML</span><span>CSS</span></div>
+        <a href="#" class="pcard-link">VOIR PROJET →</a>
+      </div>
+    </div>
+
+    <div class="pcard reveal">
+      <div class="pcard-thumb">
+         <img src="dev.jpg" alt="Portfolio" class="pcard-img"/> 
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-num">// 03</div>
+        <div class="pcard-title">Portfolio Cyberpunk</div>
+        <div class="pcard-desc">Portfolio moderne avec animations, particules et design cyberpunk.</div>
+        <div class="pcard-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        <a href="#" class="pcard-link">VOIR PROJET →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-head reveal">
+    <div class="s-label">CONTACT</div>
+    <div class="s-title">TRAVAILLONS <span class="hl">ENSEMBLE</span></div>
+  </div>
+  <div class="sec-divider"></div>
+  <div class="contact-body">
+    <div class="contact-left reveal">
+      <div class="big-text">UNE <em>IDÉE</em> ?<br/>ÉCRIS-MOI.</div>
+      <p class="contact-desc">Disponible pour projets scolaires, collaborations et opportunités.</p>
+      <div class="socials">
+        <a href="#" class="soc-link"><span>⬡</span> GITHUB</a>
+        <a href="#" class="soc-link"><span>◈</span> LINKEDIN</a>
+        <a href="#" class="soc-link"><span>◆</span> TWITTER / X</a>
+        <a href="mailto:franck@email.com" class="soc-link"><span>✉</span> franck@email.com</a>
+      </div>
+    </div>
+    <form class="contact-form reveal" onsubmit="return false;">
+      <div class="f-group">
+        <label class="f-label">// NOM</label>
+        <input class="f-input" type="text" placeholder="Ton nom"/>
+      </div>
+      <div class="f-group">
+        <label class="f-label">// EMAIL</label>
+        <input class="f-input" type="email" placeholder="ton@email.com"/>
+      </div>
+      <div class="f-group">
+        <label class="f-label">// MESSAGE</label>
+        <textarea class="f-input f-textarea" placeholder="Ton message..."></textarea>
+      </div>
+      <button type="submit" class="btn-cyber btn-c btn-full">ENVOYER →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-txt">&copy; 2026 <span>FRANCK CHENDJOU</span></div>
+  <a href="#home" class="footer-top">↑ BACK TO TOP</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
