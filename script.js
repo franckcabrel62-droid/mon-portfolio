@@ -12,7 +12,7 @@ document.addEventListener('mousemove', e => {
   setTimeout(() => {
     trail.style.left = mx + 'px';
     trail.style.top = my + 'px';
-  }, 80);
+  }, 5);
 });
 
 /* ═══════════════════════════════════
@@ -126,3 +126,39 @@ const barObserver = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.5 });
 bars.forEach(b => barObserver.observe(b));
+/* LIGHTBOX */
+function openLightbox(e, imgSrc, title, desc, tags) {
+  e.preventDefault();
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbPlaceholder = document.getElementById('lb-placeholder');
+
+  if (imgSrc) {
+    lbImg.src = imgSrc;
+    lbImg.classList.add('has-img');
+    lbPlaceholder.style.display = 'none';
+  } else {
+    lbImg.classList.remove('has-img');
+    lbPlaceholder.style.display = 'flex';
+  }
+
+  document.getElementById('lb-title').textContent = title;
+  document.getElementById('lb-desc').textContent = desc;
+
+  const tagsEl = document.getElementById('lb-tags');
+  tagsEl.innerHTML = tags.split('·').map(t =>
+    `<span>${t.trim()}</span>`
+  ).join('');
+
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});

@@ -226,21 +226,21 @@
         <div class="pcard-title">Maquette Billet Cinéma</div>
         <div class="pcard-desc">Conception d'une maquette de réservation de billets de cinéma avec parcours utilisateur complet.</div>
         <div class="pcard-tags"><span>UI/UX</span><span>FIGMA</span><span>PROTOTYPE</span></div>
-        <a href="#" class="pcard-link">VOIR PROJET →</a>
+        <a href="javascript:void(0)" class="pcard-link"<a href="javascript:void(0)" class="pcard-link" onclick="openLightbox(event, 'cinema.jpg', 'Maquette Billet Cinéma', 'Conception d\'une maquette de réservation de billets de cinéma.', 'UI/UX · FIGMA · PROTOTYPE')">VOIR PROJET →</a>>VOIR PROJET →</a>
       </div>
     </div>
 
     <div class="pcard reveal">
       <div class="pcard-thumb">
-        <div class="pcard-thumb-placeholder">📸 Image de ton projet ici</div>
-        <!-- <img src="site-pedagogique.png" alt="Site pédagogique" class="pcard-img"/> -->
+        
+         <img src="pre.jpeg" alt="Site pédagogique" class="pcard-img"/> 
       </div>
       <div class="pcard-body">
         <div class="pcard-num">// 02</div>
         <div class="pcard-title">Site Pédagogique</div>
         <div class="pcard-desc">Site web multi-pages présentant les balises HTML pour débutants.</div>
         <div class="pcard-tags"><span>HTML</span><span>CSS</span></div>
-        <a href="#" class="pcard-link">VOIR PROJET →</a>
+        <a href="javascript:void(0)" class="pcard-link"<a href="javascript:void(0)" class="pcard-link" onclick="openLightbox(event, 'pre.jpeg', 'Site Pédagogique', 'Site web multi-pages présentant les balises HTML pour débutants.', 'HTML · CSS')">VOIR PROJET →</a>>VOIR PROJET →</a>
       </div>
     </div>
 
@@ -253,11 +253,10 @@
         <div class="pcard-title">Portfolio Cyberpunk</div>
         <div class="pcard-desc">Portfolio moderne avec animations, particules et design cyberpunk.</div>
         <div class="pcard-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-        <a href="#" class="pcard-link">VOIR PROJET →</a>
+        <a href="javascript:void(0)" class="pcard-link"<a href="javascript:void(0)" class="pcard-link" onclick="openLightbox(event, 'dev.jpg', 'Portfolio Cyberpunk', 'Portfolio moderne avec animations, particules et design cyberpunk.', 'HTML · CSS · JS')">VOIR PROJET →</a>>VOIR PROJET →</a>
       </div>
     </div>
-
-  </div>
+</div>
 </section>
 
 <!-- CONTACT -->
@@ -302,5 +301,23 @@
 </footer>
 
 <script src="script.js"></script>
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <div class="lb-box" onclick="event.stopPropagation()">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <div class="lb-img-wrap">
+      <img id="lb-img" src="" alt=""/>
+      <div id="lb-placeholder" class="lb-placeholder">
+        <span>📸</span>
+        <p>Ajoute une image à ce projet</p>
+      </div>
+    </div>
+    <div class="lb-info">
+      <div id="lb-title" class="lb-title"></div>
+      <div id="lb-desc" class="lb-desc"></div>
+      <div id="lb-tags" class="lb-tags"></div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
